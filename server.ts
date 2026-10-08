@@ -3,7 +3,7 @@ import path from "path";
 import crypto from "node:crypto";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
-import { kernelEnvelope, proposedEnvelope, unknownEnvelope } from "./src/server/authority.js";
+import { kernelEnvelope, proposedEnvelope, unknownEnvelope } from "./src/server/authority.ts";
 
 const __dirname = process.cwd();
 const PORT = Number(process.env.PORT || 3000);

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { kernelEnvelope, proposedEnvelope, unknownEnvelope } from "../src/server/authority.js";
+import { kernelEnvelope, proposedEnvelope, unknownEnvelope } from "../src/server/authority.ts";
 
 test("Commander never creates authority from a proposal", () => {
   const result = proposedEnvelope();
