@@ -13,6 +13,7 @@ test("Kernel authority requires a recognized state and receipt", () => {
   assert.equal(kernelEnvelope({ state: "AUTHORIZED" }).state, "UNKNOWN");
   assert.equal(kernelEnvelope({ state: "AUTHORIZED", receipt: { id: "r1" } }).state, "AUTHORIZED");
   assert.equal(kernelEnvelope({ state: "VERIFIED", receipt: { id: "r1" } }).state, "UNKNOWN");
+  assert.equal(kernelEnvelope({ state: "AUTHORIZED", receipt: "r1" }).state, "UNKNOWN");
 });
 
 test("Provider failure is explicitly non-authoritative", () => {

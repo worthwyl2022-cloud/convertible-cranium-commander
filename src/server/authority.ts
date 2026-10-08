@@ -17,7 +17,7 @@ export function unknownEnvelope(reason: string): AuthorityEnvelope {
 
 export function kernelEnvelope(payload: any): AuthorityEnvelope {
   const state = payload?.state;
-  if (!["AUTHORIZED", "DENIED", "QUARANTINED"].includes(state) || !payload.receipt) {
+  if (!["AUTHORIZED", "DENIED", "QUARANTINED"].includes(state) || !payload.receipt || typeof payload.receipt !== "object" || Array.isArray(payload.receipt)) {
     return unknownEnvelope("Kernel response did not contain a recognized authority state and receipt");
   }
   return { state, receipt: payload.receipt, source: "cranium-kernel", reason: payload.reason };

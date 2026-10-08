@@ -90,7 +90,7 @@ export class VisualTextCoherenceEngine {
   }
 
   /**
-   * Enriches raw episode generation into a verified EpisodeSnapshot
+   * Enriches raw episode generation into a continuity-analysis EpisodeSnapshot
    * through entity parsing, thread tracking, and visual-text coherence verification.
    */
   static enrichSnapshot(
@@ -173,7 +173,7 @@ export class VisualTextCoherenceEngine {
     // Semantic tags
     const tags = raw.tags && raw.tags.length > 0
       ? raw.tags
-      : ["continuity", tone, pacing, "canon-verified", "cognitive-field"];
+      : ["continuity", tone, pacing, "canon-context", "cognitive-field"];
 
     return {
       id: `ep-${episodeNumber.toString().padStart(3, '0')}-${Date.now().toString().slice(-4)}`,

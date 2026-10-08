@@ -67,7 +67,7 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       timeCapsuleLockedUntil: isTimeCapsule ? Date.now() + 86400000 * 365 * lockYears : undefined,
       heirloomDesignee: designee,
       manifestHash: `0x${Math.random().toString(16).substring(2, 10)}${Math.random().toString(16).substring(2, 10)}`,
-      summary: newSummary || 'Cryptographically sealed generational creative atom.',
+      summary: newSummary || 'Stored generational creative atom.',
     };
 
     setEntries([newEntry, ...entries]);
@@ -164,7 +164,7 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
             className="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-bold uppercase tracking-wider transition shadow-sm flex items-center gap-2"
           >
             <Key className="w-3.5 h-3.5 text-amber-400" />
-            Seal & Mint Legacy Manifest
+            Save Legacy Manifest
           </button>
         </div>
       </form>
@@ -172,7 +172,7 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       {/* Archives List */}
       <div className="space-y-3">
         <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-700">
-          Sealed Miracle Vault Entries ({entries.length})
+          Stored Miracle Vault Entries ({entries.length})
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -95,7 +95,7 @@ export function renderEpisodeToCanvas(
     // Watermark footer
     ctx.fillStyle = '#475569';
     ctx.font = '9px monospace';
-    ctx.fillText("CRANIUM CORE EPISODIC SNAPSHOT // CANON SEALED", 32, 600);
+    ctx.fillText("CRANIUM CORE EPISODIC SNAPSHOT // CANON CONTEXT", 32, 600);
 
     return canvas.toDataURL('image/png');
   } catch (e) {

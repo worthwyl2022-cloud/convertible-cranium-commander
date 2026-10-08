@@ -166,7 +166,7 @@ export default function CreatorStudioView({ field, metrics, onAtomInjected, onNa
           ...prev,
           {
             role: 'assistant',
-            text: data.reply || "Canon consistency verified across all active threads.",
+            text: data.reply || "Canon continuity analysis returned no contradiction signal.",
             directiveSuggestion: data.directiveSuggestion
           }
         ]);
@@ -178,7 +178,7 @@ export default function CreatorStudioView({ field, metrics, onAtomInjected, onNa
           ...prev,
           {
             role: 'assistant',
-            text: "Offline cognitive mode: Analyzed character anchors and verified that no contradiction exists in the recent episodic snapshots."
+            text: "Offline cognitive mode: Analyzed character anchors locally. No Kernel authority claim is made."
           }
         ]);
       }
@@ -187,7 +187,7 @@ export default function CreatorStudioView({ field, metrics, onAtomInjected, onNa
         ...prev,
         {
           role: 'assistant',
-          text: "Offline mode active. Canon is anchored to the local episodic memory lattice."
+          text: "Offline mode active. Local episodic continuity is available as proposal context."
         }
       ]);
     } finally {
@@ -336,7 +336,7 @@ export default function CreatorStudioView({ field, metrics, onAtomInjected, onNa
           <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider flex items-center justify-between">
             <span>Episodes ({snapshots.length})</span>
             <span className="text-[10px] text-emerald-400 flex items-center gap-1 font-bold">
-              <ShieldCheck className="w-3 h-3" /> CANON SECURED
+              <ShieldCheck className="w-3 h-3" /> CANON STATE
             </span>
           </div>
 

@@ -246,7 +246,7 @@ export default function App() {
               Export Complete Package (.md)
             </button>
             <span className="text-neutral-500 font-mono text-[11px]">
-              CANON LOCKED &bull; 2026
+              CANON CONTEXT &bull; 2026
             </span>
           </div>
         </div>
