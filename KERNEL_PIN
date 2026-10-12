@@ -1,6 +1,6 @@
 KERNEL_REPO=https://github.com/worthwyl2022-cloud/cranium-kernel
 KERNEL_BRANCH=main
-KERNEL_MAIN_TIP=802b9fddbe9463c2f008285c6d97fdf618397343
+KERNEL_MAIN_TIP=390a85334f188caf9f34eff7e566ead40b89e44f
 KERNEL_FEATURE_TIP=1704c3e30269a364f696d96bf76b48c87daabee9
 KERNEL_PIN_UPDATED=2026-10-12
 
@@ -10,7 +10,7 @@ VERIFIED_ON=2026-09-30
 VERIFIED_COMMANDS=npm ci && npm run verify && npm run verify:denial-semantics
 VERIFIED_EXIT=0
 
-# The current main tip 802b9fdd is a documentation reconciliation commit.
-# The feature tip 1704c3e includes merged gateway PR #48.
+# Current Kernel main tip 390a853 includes the merged KERNEL_PIN refresh PR #49.
+# The feature tip 1704c3e includes merged enterprise gateway PR #48.
 # Do not claim current main is fully verified until the full verification
 # commands are freshly run against the current pinned commit.
