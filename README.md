@@ -1,31 +1,27 @@
-# Convertible Cranium Commander
+# Convertible Cranium Justice OS
 
-Public web surface for **Convertible Cranium Commander**, the human-facing operational guide for the Convertible Cranium Chromium Edition.
+Public web surface for **Convertible Cranium Justice OS**. **Convertible Cranium Commander AI** is its featured operational interface, not the authority plane. Positioning: **The Authority-Bound Operating System**.
 
-## Architecture surface
+## Canonical architecture
 
-Commander sits inside the **Convertible Cranium Quad Engine**:
+The Quantum-Hybrid Authority-Bound Governance Layer contains the Quantum-Hybrid Dual-Substrate, Quad-Engine architecture:
 
-- **Engine 1: Synapse** — proposal, context, derivation, and independent D_A / D_B projections
-- **Engine 2A: Substrate A** — Constitutional Authority, **May We?**
-- **Engine 2B: Substrate B** — Evidence Grounding, **Is It So?**
-- **Engine 3: Cranium Kernel** — convergence, authority transition, receipt, proof, and lineage
+- **Convertible Cranium Guardian Substrate — Constitutional Integrity**
+  - Engine A1: Synapse projection D_A, constitutional path
+  - Engine A2: Constitutional Authority
+- **Convertible Cranium Imperial Substrate — Evidence Integrity**
+  - Engine B1: Synapse projection D_B, evidence path
+  - Engine B2: Evidence Grounding
+- Both paths converge beneath all four engines at **Convertible Cranium Liberty Kernel** (proposed product name; implementation/repository currently remains Cranium Kernel / `cranium-kernel` until rename is verified).
 
-The normative flow is:
+Synapse is one system with two substrate-aligned projections. This is not a vote. The Kernel alone grants or denies governed actions and emits canonical decision/execution receipts. Quantum, classical, model, and UI outputs are supporting inputs, never authority.
 
-**Proposal Hash → A Assessment → B Assessment → Convergence → Authority Transition → Canonical Receipt → Proof → Lineage**
+## Supporting systems and truth discipline
 
-Convergence is not voting. No convergence means no authority. Safety controls remain cross-cutting, and Commander remains the operating surface rather than the authority plane.
+Unified Bottleneck / ASO, Miracle Memory, Metabolic Memory v2, Circuit Breaker / COMA, trusted execution, receipts, lineage, and audit evidence support the authority path. Metabolic Memory v2 remains off the authority path until merged and tested. Quantum-hybrid runtime is a capability target, not an audited live-runtime claim.
 
-See [CONVERTIBLE-CRANIUM-REFERENCE-ARCHITECTURE.md](./CONVERTIBLE-CRANIUM-REFERENCE-ARCHITECTURE.md) for the full reference architecture.
+Use **Constitutional Integrity** and **Evidence Integrity**. Do not use retired “May We?” / “Is It So?” prompts or “jury/juror” as canonical labels. **Justice OS** is the product; **Commander AI** is the interface, not “Commander OS.”
 
-The public Commander surface is an interface and integration layer. It is not the canonical authority implementation.
+> Cognition may come from anywhere. Authority comes only through Cranium.
 
-> Cognition may come from anywhere. Authority comes only through Convertible Cranium.
-
-## Build provenance
-
-- Canonical source: worthwyl2022-cloud/cranium-boot-drive/ecosystem/commander
-- Source revision: 8f1a2febe7e38932334610aeb9371f2f001bf6d8
-- Deployment base: /convertible-cranium-commander/
-- This repository contains the compiled static interface. The source repository remains the implementation source of truth.
+This repository is an interface/documentation surface, not proof that every target component is implemented. It does not establish a quantum backend, HSM/KMS custody, verified boot/rootfs, production deployment, multi-node fencing, independent security audit, or live durable database. A pin identifies a revision; it does not itself certify it. See `KERNEL_PIN` and `COMMANDER_OS_PACKAGE_BOUNDARY.md`.
