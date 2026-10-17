@@ -4,15 +4,17 @@ KERNEL_MAIN_TIP=710ab844571c704078852b38d9451ffe68900acf
 KERNEL_FEATURE_TIP=1704c3e30269a364f696d96bf76b48c87daabee9
 KERNEL_PIN_UPDATED=2026-10-17
 
-# Historical independent clean-clone verification stamp only.
-VERIFIED_DILIGENCE_STAMP=e36bdba2fe0a448473f94250920e751c95e1d3e0
-VERIFIED_ON=2026-09-30
+# Independent clean-clone verification stamp for the pinned current main tip.
+VERIFIED_DILIGENCE_STAMP=710ab844571c704078852b38d9451ffe68900acf
+VERIFIED_ON=2026-10-17
 VERIFIED_COMMANDS=npm ci && npm run verify && npm run verify:denial-semantics
 VERIFIED_EXIT=0
+VERIFIED_ENVIRONMENT=fresh-clean-clone-at-exact-sha
+NPM_AUDIT_VULNERABILITIES=0
+PRODUCTION_READINESS_WARNINGS=2
 
-# Current Kernel main tip: 710ab844571c704078852b38d9451ffe68900acf.
-# Kernel CI evidence is tracked separately; this pin is a revision pointer, not a
-# fresh clean-clone verification stamp. The historical stamp above remains 2026-09-30.
+# Current Kernel main tip and clean-clone verification stamp: 710ab844571c704078852b38d9451ffe68900acf.
+# npm audit reports zero vulnerabilities on this exact tip.
+# Production-readiness emits two local Compose warnings: PostgreSQL TLS is disabled
+# locally and the local Redis endpoint is plaintext. Production must use TLS settings.
 # The feature tip 1704c3e includes merged enterprise gateway PR #48.
-# Do not claim current main is fully verified until the full verification
-# commands are freshly run against the current pinned commit.

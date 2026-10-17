@@ -18,7 +18,7 @@ Cognition and interface code may propose or present operations; they do not gran
 
 ## Kernel pin and verification lineage
 
-See [`KERNEL_PIN`](./KERNEL_PIN) for the exact Kernel default-branch tip, feature tip, and verification lineage. The pin now points to `710ab844571c704078852b38d9451ffe68900acf`. A pin identifies a revision; it does not itself certify that revision. The last independent full clean-clone verification stamp remains the historical `e36bdba2fe0a448473f94250920e751c95e1d3e0` dated 2026-09-30. A fresh `npm ci && npm run verify && npm run verify:denial-semantics` run against the pinned current tip is required before claiming that current tip is fully verified.
+See [`KERNEL_PIN`](./KERNEL_PIN) for the exact Kernel default-branch tip, feature tip, and verification lineage. The pin now points to `710ab844571c704078852b38d9451ffe68900acf`. A pin identifies a revision; it does not itself certify that revision. A fresh clean-clone run of `npm ci && npm run verify && npm run verify:denial-semantics` passed on that exact SHA on 2026-10-17; `npm audit` reported zero vulnerabilities. The verification output still reports two local Compose warnings: PostgreSQL TLS is disabled locally and Redis uses plaintext locally. Production deployments must enable PostgreSQL TLS and use `rediss://` or private-network encryption for Redis. This does not establish that a live production database, Redis, HSM/KMS, or independently audited deployment exists.
 
 ## Release and diligence requirements
 
