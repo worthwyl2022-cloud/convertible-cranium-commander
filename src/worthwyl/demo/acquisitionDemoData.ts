@@ -19,14 +19,14 @@ export const DEMO_CHAPTERS: DemoChapter[] = [
     act: "Act I",
     title: "The Creative Bottleneck & The Behavioral Contract",
     durationSec: 18,
-    narratorVoiceText: "Welcome to WorthWyl Creative OS. Today's creative tools treat artificial intelligence as a disposable chat generator. In long-running projects, models drift, character arcs collapse, and creative intent is diluted. WorthWyl introduces Cranium Core, the world's first directive-governed cognitive substrate that treats canon, identity, and intent as first-class constraints.",
+    narratorVoiceText: "Welcome to Convertible Cranium Justice OS, a development-stage authority-bound operating-system concept. This demo explores how a governed workflow can distinguish proposals, evidence, and authority. The interface is illustrative; canonical authorization must come from the Kernel contract, not a model or UI label.",
     captions: [
       "Current generative tools suffer from canon amnesia and narrative drift.",
-      "Cranium Core establishes an immutable behavioral contract between author and machine.",
-      "Intent, canon, and emotional logic are enforced as first-class physical constraints."
+      "The architecture specifies a behavioral contract between human intent, cognition, evidence, and governed action.",
+      "Intent, canon, and emotional logic are represented as explicit constraints in the prototype."
     ],
     keyHighlights: [
-      { metric: "100%", label: "Constraint Guarantee", description: "Identity and canon cannot be overridden by conversational drift." },
+      { metric: "Prototype", label: "Constraint Design", description: "Constitutional and identity constraints are design goals; full-system guarantees are not claimed." },
       { metric: "0.90", label: "Coherence Floor", description: "Calibrated threshold enforcing strict multi-episode integrity." },
       { metric: "4 Core", label: "Subsystem Pillars", description: "Cranium Core, Media Engine, Studio, and Miracle Archive." }
     ],
@@ -55,14 +55,14 @@ export const DEMO_CHAPTERS: DemoChapter[] = [
     act: "Act III",
     title: "The Episodic Novel Engine & Visual Coherence",
     durationSec: 22,
-    narratorVoiceText: "In the Creator Studio, the engine crafts multi-episode serialized narratives. Notice how every generated episode is instantly rendered into a visual typographic snapshot. Our visual cortex analyzes layout density and visual pacing shifts. Character arcs from first appearance to current conflict are mapped automatically, while open and resolved plot threads are governed with zero loss.",
+    narratorVoiceText: "In the Creator Studio prototype, narrative snapshots and continuity tools help inspect characters and plot threads. These are workflow aids, not a guarantee of zero-loss continuity or autonomous correctness.",
     captions: [
       "Continuous serialized generation preserving character timelines and location history.",
       "Visual Cortex renders typographic snapshot cards to inspect visual density & pacing.",
-      "Multi-thread tracker guarantees no plot threads are dropped or arbitrarily forgotten."
+      "Thread tracking is a prototype aid; completeness must be evaluated against test corpora."
     ],
     keyHighlights: [
-      { metric: "100% Retained", label: "Character Lineage", description: "Tracks firstSeen, lastSeen, and conflict progression." },
+      { metric: "Tracked", label: "Character Lineage", description: "Prototype tracks firstSeen, lastSeen, and conflict progression where available." },
       { metric: "Dual Cortex", label: "Visual + Text Hybrid", description: "Detects pacing drift through both linguistic and layout density." },
       { metric: "3-5 Epoch", label: "Episodic Spine", description: "ContextBuilder synthesizes recent canon with active persona philosophy." }
     ],
@@ -77,10 +77,10 @@ export const DEMO_CHAPTERS: DemoChapter[] = [
     captions: [
       "60-second structured capture: situation, trigger, thought, assumption, and outcome.",
       "Audits self-shrinking, overexplaining, and emotional retreat in high-stakes creative moments.",
-      "Weekly review engine surfaces recurring blind spots and prescribes testable experiments."
+      "Review tooling can surface patterns for human interpretation; it does not diagnose or prescribe treatment."
     ],
     keyHighlights: [
-      { metric: "38%", label: "Shrinking Detection", description: "Identifies behavioral regressions during high-status stakeholder meetings." },
+      { metric: "Experimental", label: "Pattern Review", description: "Human-reviewed observations; no validated clinical or predictive accuracy claim." },
       { metric: "60-Second", label: "Zero-Friction Logging", description: "Instant capture card engineered for busy founders and artists." },
       { metric: "Testable Micro-Action", label: "Behavioral Growth", description: "Transforms messy creative doubts into clear, disciplined conviction." }
     ],
@@ -91,16 +91,16 @@ export const DEMO_CHAPTERS: DemoChapter[] = [
     act: "Act V",
     title: "Enterprise Architecture & Acquisition Diligence",
     durationSec: 20,
-    narratorVoiceText: "WorthWyl Creative OS is engineered as an enterprise-grade microservice constellation. Designed for Azure Kubernetes Service, it integrates Istio service mesh, Redis caching, and AES-256 encrypted Miracle Archive storage. With zero debt and verifiable behavioral contracts, it represents an acquisition-ready strategic bridge for Microsoft Copilot and Azure AI.",
+    narratorVoiceText: "The current architecture is a development-stage target. Azure, Kubernetes, Istio, encryption custody, and durable cloud storage are not claimed as live integrations by this demo. Commercial, IP, and security diligence remain separate workstreams.",
     captions: [
-      "Microservice topology built for Azure Kubernetes Service with Istio service mesh.",
-      "Encrypted Miracle Archive preserving generational creative assets with AES-256.",
-      "Clean IP, honest diligence validation, and turnkey integration into Microsoft's ecosystem."
+      "Deployment topology is a design target; live cloud integration is not established here.",
+      "Memory and archive concepts require separate storage, encryption, and recovery verification.",
+      "Evidence-led diligence, clear IP boundaries, and independently validated integrations are required before commercialization."
     ],
     keyHighlights: [
-      { metric: "AKS Ready", label: "Enterprise Topology", description: "Isolated namespaces for Core, Media, Studio, and Legacy." },
-      { metric: "AES-256", label: "Miracle Archive", description: "Generational encrypted storage with immutable provenance." },
-      { metric: "Category 1st", label: "Creative OS Moat", description: "Positions acquirer to lead creative cognition rather than commodity chatbots." }
+      { metric: "Target", label: "Deployment Topology", description: "Cloud topology is proposed, not a verified live deployment." },
+      { metric: "Unverified", label: "Archive Security", description: "Do not claim encryption custody or immutable storage without implementation evidence." },
+      { metric: "Concept", label: "Governance Differentiation", description: "Potential differentiation requires legal review and comparative validation." }
     ],
     visualMode: "architecture"
   }

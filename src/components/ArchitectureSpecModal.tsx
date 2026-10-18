@@ -1,249 +1,53 @@
-import React, { useState } from 'react';
-import { X, Server, Layers, Shield, Cpu, Network, CheckCircle, ExternalLink, Code } from 'lucide-react';
+import { X, Shield, Cpu, Layers, GitBranch } from 'lucide-react';
 
-interface Props {
-  isOpen: boolean;
-  onClose: () => void;
-}
+interface Props { isOpen: boolean; onClose: () => void; }
+
+const engines = [
+  { id: 'A1', name: 'Synapse projection D_A', detail: 'Guardian constitutional-path projection and proposal binding.' },
+  { id: 'A2', name: 'Constitutional Authority', detail: 'Evaluates constitutional constraints; assessment is not itself a grant.' },
+  { id: 'B1', name: 'Synapse projection D_B', detail: 'Imperial evidence-path projection, claims, sources, and provenance.' },
+  { id: 'B2', name: 'Evidence Grounding', detail: 'Evaluates evidence and contradictions; assessment is not itself a grant.' },
+];
 
 export default function ArchitectureSpecModal({ isOpen, onClose }: Props) {
-  const [activeTab, setActiveTab] = useState<'architecture' | 'contracts' | 'k8s' | 'acquisition'>('architecture');
-
   if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 bg-neutral-900/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-      <div className="bg-white w-full max-w-4xl rounded-2xl border border-neutral-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
-        {/* Modal Header */}
-        <div className="p-5 border-b border-neutral-200 flex items-center justify-between bg-neutral-50/70">
+    <div className="fixed inset-0 z-50 bg-neutral-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+      <div className="bg-neutral-950 text-neutral-100 w-full max-w-5xl rounded-2xl border border-neutral-800 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+        <header className="p-5 border-b border-neutral-800 flex items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2">
-              <Server className="w-5 h-5 text-blue-600" />
-              <h2 className="text-base font-bold text-neutral-900">
-                WorthWyl Creative OS — Technical Architecture & Acquisition Spec
-              </h2>
-            </div>
-            <p className="text-xs text-neutral-500 mt-0.5 font-mono">
-              Target Infrastructure: Microsoft Azure Cloud Platform (AKS + Istio + KeyVault)
-            </p>
+            <div className="flex items-center gap-2"><Shield className="w-5 h-5 text-amber-400" /><h2 className="text-lg font-bold">Convertible Cranium Justice OS</h2></div>
+            <p className="text-xs text-neutral-400 mt-1">The Authority-Bound Operating System · Architecture target and diligence boundaries</p>
           </div>
-          <button
-            onClick={onClose}
-            className="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-700 hover:bg-neutral-200 transition"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Tab navigation */}
-        <div className="flex border-b border-neutral-200 bg-white px-5 gap-4">
-          {(
-            [
-              { id: 'architecture', label: 'Microservice Constellation' },
-              { id: 'contracts', label: 'Core Contracts (APIs)' },
-              { id: 'k8s', label: 'Kubernetes & Istio Mesh' },
-              { id: 'acquisition', label: 'Acquisition / Due Diligence' },
-            ] as const
-          ).map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`py-3 text-xs font-bold transition border-b-2 ${
-                activeTab === tab.id
-                  ? 'border-blue-600 text-blue-600'
-                  : 'border-transparent text-neutral-500 hover:text-neutral-800'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Tab Content */}
-        <div className="p-6 overflow-y-auto space-y-6 text-sm text-neutral-700 flex-1">
-          {activeTab === 'architecture' && (
-            <div className="space-y-4">
-              <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-blue-900 mb-1">
-                  Unified Creative OS Paradigm
-                </h3>
-                <p className="text-xs text-blue-800 leading-relaxed">
-                  Unlike fragmented creator utilities (DAWs, word processors, video editors), WorthWyl Creative OS
-                  integrates cognitive feedback, media rendering, and generational storage into an orchestrated microservice constellation.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-900">
-                    <Cpu className="w-4 h-4 text-blue-600" />
-                    1. Cranium Core Supercluster
-                  </div>
-                  <p className="text-xs text-neutral-600 leading-relaxed">
-                    ML serving layer (vLLM / KServe) evaluating real-time emotional baseline, tension, coherence, continuity, and theme drift. Latency benchmark &lt; 150ms.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-900">
-                    <Server className="w-4 h-4 text-indigo-600" />
-                    2. High-IO Media Pipeline
-                  </div>
-                  <p className="text-xs text-neutral-600 leading-relaxed">
-                    GPU-accelerated MP4 assembly with resumable Kubernetes workers, streaming chunked speech synthesis, and 3-stage caching (Timeline → Audio → MP4).
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-900">
-                    <Layers className="w-4 h-4 text-purple-600" />
-                    3. Creator Studio & BFF
-                  </div>
-                  <p className="text-xs text-neutral-600 leading-relaxed">
-                    Orchestrated Backend-For-Frontend (BFF) delivering WebSocket updates for multi-track waveform state, script beat tone suggestions, and command palettes.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-900">
-                    <Shield className="w-4 h-4 text-amber-600" />
-                    4. Generational Miracle Archive
-                  </div>
-                  <p className="text-xs text-neutral-600 leading-relaxed">
-                    Durable generational storage using AES-256 double envelope encryption in Azure KeyVault, time-capsule date locks, and immutable manifest hashes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'contracts' && (
-            <div className="space-y-4">
-              <div className="p-3 bg-neutral-900 text-neutral-200 rounded-xl font-mono text-xs overflow-x-auto">
-                <div className="text-emerald-400 font-bold mb-2">// POST /api/core/analyze</div>
-                <div>Request: {'{'} text: string, audioUrl?: string, projectId: string {'}'}</div>
-                <div className="text-neutral-400 mt-1">Response:</div>
-                <div className="text-neutral-300">
-                  {'{'}
-                  <br />
-                  &nbsp;&nbsp;emotion: EmotionScore, // [-1.0 to 1.0]
-                  <br />
-                  &nbsp;&nbsp;narrative: NarrativeStructure, // Act beats
-                  <br />
-                  &nbsp;&nbsp;directives: ['STABILIZE' | 'ESCALATE' | 'SHIFT_THEME' | 'ADVANCE'],
-                  <br />
-                  &nbsp;&nbsp;confidence: 0.965
-                  <br />
-                  {'}'}
-                </div>
-              </div>
-
-              <div className="p-3 bg-neutral-900 text-neutral-200 rounded-xl font-mono text-xs overflow-x-auto">
-                <div className="text-indigo-400 font-bold mb-2">// POST /api/media/render</div>
-                <div>Request: {'{'} projectId: string, timeline: TimelineSpec {'}'}</div>
-                <div className="text-neutral-400 mt-1">Response:</div>
-                <div className="text-neutral-300">
-                  {'{'} jobId: "job_8829", status: "queued", estimatedSec: 3.8 {'}'}
-                </div>
-              </div>
-
-              <div className="p-3 bg-neutral-900 text-neutral-200 rounded-xl font-mono text-xs overflow-x-auto">
-                <div className="text-amber-400 font-bold mb-2">// POST /api/legacy/archive</div>
-                <div>Request: {'{'} assetId: string, policy: LegacyPolicy {'}'}</div>
-                <div className="text-neutral-400 mt-1">Response:</div>
-                <div className="text-neutral-300">
-                  {'{'} entryId: "miracle_001", encrypted: true, indexed: true {'}'}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'k8s' && (
-            <div className="space-y-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-800">
-                Kubernetes (AKS) Cluster Topology
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-core</div>
-                  <div className="text-neutral-500 mt-1">Cranium loop, model-serving, Qdrant/pgvector</div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-media</div>
-                  <div className="text-neutral-500 mt-1">Media API, GPU render workers, chunk cache</div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-legacy</div>
-                  <div className="text-neutral-500 mt-1">Miracle vault, AES-256 encryption, search</div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-studio</div>
-                  <div className="text-neutral-500 mt-1">Studio BFF, React front-end, WebSockets</div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-edge</div>
-                  <div className="text-neutral-500 mt-1">Azure Front Door, Envoy ingress, rate limiting</div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">worthwyl-platform</div>
-                  <div className="text-neutral-500 mt-1">Istio mTLS, Prometheus, Jaeger, OpenTelemetry</div>
-                </div>
-              </div>
-
-              <div className="p-4 bg-neutral-900 text-neutral-300 font-mono text-xs rounded-xl overflow-x-auto">
-                <div className="text-neutral-400 font-bold mb-1"># Istio VirtualService Route Spec</div>
-                <div>apiVersion: networking.istio.io/v1alpha3</div>
-                <div>kind: VirtualService</div>
-                <div>metadata: name: worthwyl-gateway</div>
-                <div>spec:</div>
-                <div>&nbsp;&nbsp;hosts: ["*"]</div>
-                <div>&nbsp;&nbsp;http:</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;- match: [{'{'} uri: {'{'} prefix: /api/core {'}'} {'}'}]</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route: [{'{'} destination: {'{'} host: cranium-core-api, port: 8080 {'}'} {'}'}]</div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'acquisition' && (
-            <div className="space-y-4">
-              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
-                <div className="flex items-center gap-2 text-xs font-bold text-emerald-900">
-                  <CheckCircle className="w-4 h-4 text-emerald-600" />
-                  Strategic Value to Microsoft / Azure
-                </div>
-                <p className="text-xs text-emerald-800 mt-1 leading-relaxed">
-                  Positions Microsoft with a category-defining creative operating system directly integrated with Azure AI,
-                  OneDrive storage, Copilot assistant, and Surface creative hardware.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">Pre-Revenue IP Posture</div>
-                  <div className="text-neutral-600 mt-1">
-                    Documented behavioral contract, quarantine boundary, immune incidents, and deterministic resonance field.
-                  </div>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg border border-neutral-200">
-                  <div className="font-bold text-neutral-900">Clean Intellectual Property</div>
-                  <div className="text-neutral-600 mt-1">
-                    Self-contained TypeScript/Python contracts, no unauthorized dependencies, scrubbed lineage.
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Modal Footer */}
-        <div className="p-4 border-t border-neutral-200 bg-neutral-50 flex items-center justify-between">
-          <span className="text-xs text-neutral-500">WorthWyl OS Architecture v1.0 — Acquisition Grade</span>
-          <button
-            onClick={onClose}
-            className="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-bold transition"
-          >
-            Close Spec
-          </button>
+          <button onClick={onClose} aria-label="Close architecture details" className="p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800"><X className="w-5 h-5" /></button>
+        </header>
+        <div className="p-5 md:p-7 overflow-y-auto space-y-6">
+          <section className="rounded-2xl border border-amber-400/20 bg-amber-400/[0.04] p-5">
+            <div className="flex items-center gap-2 text-amber-300 text-xs font-bold uppercase tracking-wider"><Layers className="w-4 h-4" /> Governance architecture</div>
+            <h3 className="mt-2 text-xl font-bold">Quantum-Hybrid Authority-Bound Governance Layer</h3>
+            <p className="mt-2 text-sm text-neutral-300 leading-6">Contains the Quantum-Hybrid Dual-Substrate, Quad-Engine architecture. Synapse is one system with two substrate-aligned projections. The paths converge beneath all four engines at one Kernel authority boundary. This is not a vote.</p>
+          </section>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <section className="rounded-2xl border border-violet-400/25 bg-violet-400/[0.035] p-4">
+              <h3 className="font-bold text-violet-200">Convertible Cranium Guardian Substrate</h3><p className="mt-1 text-xs text-neutral-400">Constitutional Integrity</p>
+              <div className="mt-4 space-y-3">{engines.filter(e => e.id.startsWith('A')).map(e => <div key={e.id} className="rounded-xl border border-neutral-800 bg-neutral-900 p-3"><div className="text-[10px] font-mono text-neutral-500">ENGINE {e.id}</div><div className="mt-1 text-sm font-semibold">{e.name}</div><p className="mt-1 text-xs leading-5 text-neutral-400">{e.detail}</p></div>)}</div>
+            </section>
+            <section className="rounded-2xl border border-cyan-400/25 bg-cyan-400/[0.035] p-4">
+              <h3 className="font-bold text-cyan-200">Convertible Cranium Imperial Substrate</h3><p className="mt-1 text-xs text-neutral-400">Evidence Integrity</p>
+              <div className="mt-4 space-y-3">{engines.filter(e => e.id.startsWith('B')).map(e => <div key={e.id} className="rounded-xl border border-neutral-800 bg-neutral-900 p-3"><div className="text-[10px] font-mono text-neutral-500">ENGINE {e.id}</div><div className="mt-1 text-sm font-semibold">{e.name}</div><p className="mt-1 text-xs leading-5 text-neutral-400">{e.detail}</p></div>)}</div>
+            </section>
+          </div>
+          <section className="rounded-2xl border border-emerald-400/20 bg-emerald-400/[0.035] p-5">
+            <div className="flex items-center gap-2 text-emerald-200 font-bold"><GitBranch className="w-4 h-4" /> Single authority boundary</div>
+            <h3 className="mt-2 text-lg font-bold">Cranium Kernel</h3>
+            <p className="mt-2 text-sm leading-6 text-neutral-300">The proposed product name is Convertible Cranium Liberty Kernel. The current implementation and repository slug remain Cranium Kernel / <code>cranium-kernel</code> until a rename is actually completed and verified. Only the Kernel may authorize or deny governed actions and emit canonical receipts.</p>
+          </section>
+          <section className="grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl border border-neutral-800 p-4"><Cpu className="w-4 h-4 text-amber-300" /><h4 className="mt-2 text-sm font-bold">Quantum-hybrid compute</h4><p className="mt-1 text-xs leading-5 text-neutral-400">Capability target only. No audited live quantum runtime is claimed.</p></div>
+            <div className="rounded-xl border border-neutral-800 p-4"><Shield className="w-4 h-4 text-amber-300" /><h4 className="mt-2 text-sm font-bold">Security boundary</h4><p className="mt-1 text-xs leading-5 text-neutral-400">No claim of independent security audit, HSM/KMS custody, or verified boot without separate evidence.</p></div>
+            <div className="rounded-xl border border-neutral-800 p-4"><Layers className="w-4 h-4 text-amber-300" /><h4 className="mt-2 text-sm font-bold">Infrastructure</h4><p className="mt-1 text-xs leading-5 text-neutral-400">Cloud, Redis, Postgres, and multi-node controls require actual environment-backed verification.</p></div>
+          </section>
+          <p className="text-xs leading-5 text-neutral-500">Architecture and prototype screens are not proof of production deployment or complete implementation. Cognition may come from anywhere. Authority comes only through Cranium.</p>
         </div>
       </div>
     </div>
