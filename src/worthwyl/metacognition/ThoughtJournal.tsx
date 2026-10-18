@@ -237,7 +237,7 @@ export default function ThoughtJournal({ onEntryLogged }: ThoughtJournalProps) {
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(entries, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `worthwyl-thought-journal-${new Date().toISOString().split('T')[0]}.json`);
+    downloadAnchor.setAttribute('download', `convertible-cranium-thought-journal-${new Date().toISOString().split('T')[0]}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
@@ -245,7 +245,7 @@ export default function ThoughtJournal({ onEntryLogged }: ThoughtJournalProps) {
 
   // Export Markdown
   const handleExportMarkdown = () => {
-    let md = `# WorthWyl Creative OS — Metacognitive Thought Journal\n\n`;
+    let md = `# Convertible Cranium Justice OS — Metacognitive Thought Journal\n\n`;
     md += `*Exported on ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}*\n\n`;
     md += `Total Entries: ${entries.length}\n\n---\n\n`;
 
@@ -266,7 +266,7 @@ export default function ThoughtJournal({ onEntryLogged }: ThoughtJournalProps) {
     const dataStr = 'data:text/markdown;charset=utf-8,' + encodeURIComponent(md);
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `worthwyl-thought-journal-${new Date().toISOString().split('T')[0]}.md`);
+    downloadAnchor.setAttribute('download', `convertible-cranium-thought-journal-${new Date().toISOString().split('T')[0]}.md`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();

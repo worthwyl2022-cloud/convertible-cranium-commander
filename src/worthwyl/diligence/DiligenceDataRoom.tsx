@@ -7,7 +7,7 @@ import {
 export default function DiligenceDataRoom() {
   const [copied, setCopied] = useState(false);
 
-  const fullMarkdownContent = `# Cranium Core & WorthWyl Creative OS — Acquisition One-Pager & Diligence Manual
+  const fullMarkdownContent = `# Convertible Cranium Justice OS — Technical Diligence Snapshot
 
 **Asset Class:** Pre-revenue creative-governance prototype (IP + architecture + working substrate)  
 **Not:** A revenue-generating SaaS, a proven continuity product, or a validated benchmark leader  
@@ -24,7 +24,7 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
 |---|---|
 | Proven better canon recall than RAG | **Not established.** Treat as known gap with a defined fix path. |
 | Full NLI contradiction engine | **NLI-proxy** + optional LLM-judge adapter; not a trained CrossEncoder in the client build. |
-| Multi-tenant production platform | Single-process / in-memory field; project isolation is designed, ready for cluster deployment. |
+| Multi-tenant production platform | Single-process / in-memory demo; production and cluster readiness are not established. |
 | Revenue / users / ARR | None. |
 | Valuation comps | Value based on behavioral contracts, architectural integrity, and IP defensibility. |
 
@@ -32,19 +32,19 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
 
 ## 2. The Architectural Moat
 
-### Real (Defensible IP):
+### Documented design concepts (protectability requires counsel review):
 - **Behavioral Contract:** Intention &rarr; Identity &rarr; Memory Permanence &rarr; Conflict as Signal &rarr; Directive-Driven Next Move.
 - **Quarantine Boundary:** Generated material is provisional until evidenced and canonicalized.
 - **Resonance Field Physics:** Non-linear mass-weighted emotional baseline, collision penalties, and continuous velocity-dampened continuity scoring.
 - **Directive Governor:** Deterministic threshold resolution (STABILIZE, ESCALATE, SHIFT_THEME, ADVANCE).
-- **Metacognitive Tracker:** Integrated self-awareness engine capturing founder/creator distortions (self-shrinking, overexplaining) to maintain uncompromised human intent.
+- **Metacognitive Tracker:** Educational reflection tool. It is not a medical diagnostic or treatment system.
 
-### Easily Copied / Avoid Overclaiming:
+### Avoid overclaiming:
 - Chat wrappers, simple vector RAG pipelines without constitutional write-back.
 
 ---
 
-## 3. Microsoft Azure Enterprise Deployment Architecture
+## 3. Illustrative deployment target (not evidence of deployment)
 
 \`\`\`
                                   [ Azure Front Door / WAF ]
@@ -65,10 +65,9 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
          (Substrate State & Gauges)                       (Miracle Archive / Atoms)
 \`\`\`
 
-- **Cloud Target:** Azure Kubernetes Service (AKS)
-- **Service Mesh:** Istio with mTLS and distributed tracing
-- **Encryption:** AES-256 for Miracle Archive generational assets
-- **Security:** Invariant validation preventing unauthorized authority elevation
+- Azure / AKS / Istio / Key Vault are not claimed as deployed or validated by this document.
+- Encryption, key custody, service-mesh mTLS, and production security must be independently verified before any such claim.
+- The current public interface is a development-stage demonstration; it is not the canonical authority plane.
 
 ---
 
@@ -76,7 +75,7 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
 
 1. Run frozen corpus on real LLMs; publish methodology and raw outputs.
 2. Wire LLM-judge as default contradiction gate; keep proxy as prefilter.
-3. Clean IP, zero third-party encumbrances, defined post-sale support window.
+3. Obtain counsel review of chain of title, contributor assignments, licenses, encumbrances, and any proposed post-sale support obligations.
 `;
 
   const handleCopy = () => {
@@ -105,11 +104,11 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
             <span className="px-2.5 py-0.5 text-xs font-mono font-semibold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full flex items-center gap-1.5">
               <Server className="w-3 h-3" /> Diligence & Architecture Data Room
             </span>
-            <span className="text-xs text-neutral-400 font-mono">MICROSOFT / ACQUISITION READY</span>
+            <span className="text-xs text-neutral-400 font-mono">DEVELOPMENT-STAGE / DILIGENCE IN PROGRESS</span>
           </div>
-          <h2 className="text-2xl font-bold text-white tracking-tight">Cranium Core Acquisition Dossier</h2>
+          <h2 className="text-2xl font-bold text-white tracking-tight">Convertible Cranium Justice OS Diligence Snapshot</h2>
           <p className="text-xs md:text-sm text-neutral-400 mt-0.5">
-            Honest diligence review, invariant verification, behavioral contract specifications, and Microsoft Azure cloud topology.
+            Evidence-led diligence, behavioral contracts, current verification results, and explicit implementation boundaries.
           </p>
         </div>
 
@@ -135,21 +134,21 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="p-5 rounded-2xl bg-neutral-900 border border-neutral-800 space-y-2">
           <span className="text-xs font-mono uppercase text-emerald-400 font-semibold flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4" /> Clean Title & IP
+            <ShieldCheck className="w-4 h-4" /> Chain of Title Review
           </span>
-          <h3 className="text-sm font-bold text-white">Sovereign Origin</h3>
+          <h3 className="text-sm font-bold text-white">Counsel Verification Required</h3>
           <p className="text-xs text-neutral-400 leading-relaxed">
-            All code, documents, and behavioral contract formulations were built from first principles with clean chain of title. No proprietary external model dependencies.
+            Ownership, assignment, contributor rights, and third-party license status require documented review. No clean-chain-of-title conclusion is made by this interface.
           </p>
         </div>
 
         <div className="p-5 rounded-2xl bg-neutral-900 border border-neutral-800 space-y-2">
           <span className="text-xs font-mono uppercase text-blue-400 font-semibold flex items-center gap-1.5">
-            <Layers className="w-4 h-4" /> Azure Alignment
+            <Layers className="w-4 h-4" /> Deployment Target
           </span>
-          <h3 className="text-sm font-bold text-white">Microsoft Copilot Synergy</h3>
+          <h3 className="text-sm font-bold text-white">Not Yet Validated</h3>
           <p className="text-xs text-neutral-400 leading-relaxed">
-            Direct drop-in for AKS and Azure AI Studio, elevating generic chat assistants to long-running cognitive and creative serialization platforms.
+            No direct integration, deployment, or compatibility claim is made for Azure, AKS, or Copilot. Any target environment must be implemented and tested separately.
           </p>
         </div>
 
@@ -157,9 +156,9 @@ Cranium Core is a **directive-governed cognitive substrate** for long-running cr
           <span className="text-xs font-mono uppercase text-amber-400 font-semibold flex items-center gap-1.5">
             <AlertCircle className="w-4 h-4" /> Honest Diligence Posture
           </span>
-          <h3 className="text-sm font-bold text-white">Survives Technical Review</h3>
+          <h3 className="text-sm font-bold text-white">Known-Gap Discipline</h3>
           <p className="text-xs text-neutral-400 leading-relaxed">
-            Concealing regression fails technical audits. WorthWyl documents its current NLI proxy and provides the clear 90-day frozen LLM benchmark remediation roadmap.
+            Open gaps and non-claims must remain visible. Benchmark superiority, independent security audit, and production deployment are not claimed without evidence.
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-name: Deploy Cranium OS
+name: Deploy Justice OS Chromium Edition
 
 on:
   push:
