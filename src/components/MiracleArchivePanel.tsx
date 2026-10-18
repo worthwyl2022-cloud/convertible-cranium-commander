@@ -12,8 +12,8 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       id: 'miracle_canon_001',
       title: 'The Great Orbital Severance — Original Canon',
       timestamp: Date.now() - 86400000 * 4,
-      encrypted: true,
-      aesKeyFingerprint: 'SHA256:4f8e9b01a2d763...[Azure KeyVault]',
+      encrypted: false,
+      aesKeyFingerprint: 'DEMO_ONLY_NOT_A_KEY',
       tags: ['space', 'isolation', 'meaning'],
       cognitiveSnapshot: {
         emotional_baseline: -0.28,
@@ -24,15 +24,15 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       },
       timeCapsuleLockedUntil: Date.now() + 86400000 * 365 * 5, // 5 years in future
       heirloomDesignee: 'Creative Successor / Family Trust #882',
-      manifestHash: '0x99a14bcde0813476fdeea901041444bcfa89',
+      manifestHash: 'DEMO_ONLY_NOT_VERIFIED',
       summary: 'Complete master recording and emotional telemetry of the foundational space chapter.',
     },
     {
       id: 'miracle_canon_002',
       title: 'Philosophical Axioms on AI Creative Autonomy',
       timestamp: Date.now() - 86400000 * 12,
-      encrypted: true,
-      aesKeyFingerprint: 'SHA256:77e4bc8199214a...[Azure KeyVault]',
+      encrypted: false,
+      aesKeyFingerprint: 'DEMO_ONLY_NOT_A_KEY',
       tags: ['meaning', 'technology'],
       cognitiveSnapshot: {
         emotional_baseline: 0.35,
@@ -41,7 +41,7 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
         continuity: 0.89,
         theme_drift: 0.05,
       },
-      manifestHash: '0x32cf09ea771801bfb982181467ccdde140',
+      manifestHash: 'DEMO_ONLY_NOT_VERIFIED',
       summary: 'Curated creative manifesto defining human intentionality inside autonomous generation systems.',
     },
   ]);
@@ -60,14 +60,14 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       id: `miracle_canon_00${entries.length + 1}`,
       title: newTitle,
       timestamp: Date.now(),
-      encrypted: true,
-      aesKeyFingerprint: `SHA256:${Math.random().toString(36).substring(2, 12)}...[Azure KeyVault]`,
+      encrypted: false,
+      aesKeyFingerprint: 'DEMO_ONLY_NOT_A_KEY',
       tags: ['meaning', 'continuity'],
       cognitiveSnapshot: { ...currentMetrics },
       timeCapsuleLockedUntil: isTimeCapsule ? Date.now() + 86400000 * 365 * lockYears : undefined,
       heirloomDesignee: designee,
-      manifestHash: `0x${Math.random().toString(16).substring(2, 10)}${Math.random().toString(16).substring(2, 10)}`,
-      summary: newSummary || 'Stored generational creative atom.',
+      manifestHash: 'DEMO_ONLY_NOT_VERIFIED',
+      summary: newSummary || 'Demo entry only. No asset encryption or durable archival write occurs.',
     };
 
     setEntries([newEntry, ...entries]);
@@ -82,18 +82,18 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
           <div className="flex items-center gap-2">
             <Archive className="w-5 h-5 text-amber-600" />
             <h2 className="text-base font-bold uppercase tracking-wider text-neutral-800">
-              Miracle Archive — Generational Layer
+              Miracle Archive — Illustrative Metadata
             </h2>
           </div>
           <p className="text-xs text-neutral-500 mt-0.5">
-            The world's first creative subsystem built to outlive its creator with AES-256 time-capsules & heirloom policies
+            UI-only demo metadata. This panel does not encrypt, seal, lock, or custody assets.
           </p>
         </div>
 
         <div className="flex items-center gap-2">
           <span className="flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-900 border border-amber-200 rounded-lg text-xs font-semibold">
             <Lock className="w-3.5 h-3.5 text-amber-700" />
-            Double Envelope AES-256
+            No live encryption backend
           </span>
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function MiracleArchivePanel({ currentMetrics }: Props) {
       <form onSubmit={handleCreateArchival} className="p-4 bg-neutral-50 rounded-xl border border-neutral-200 space-y-3.5">
         <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-800 flex items-center gap-1.5">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
-          Seal New Generational Artifact
+          Create Illustrative Archive Entry
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

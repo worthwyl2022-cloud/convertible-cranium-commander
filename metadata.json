@@ -1,7 +1,10 @@
 {
-  "name": "WorthWyl Creative OS",
-  "description": "A cognitive operating system for creators, uniting Cranium Core intelligence, multi-track studio timeline, media rendering, and generational Miracle Archive.",
-  "requestFramePermissions": ["microphone"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "name": "Convertible Cranium Justice OS",
+  "description": "Development-stage authority-bound operating-system concept with the Chromium Edition interface, Guardian and Imperial substrates, and Kernel-canonical authority boundaries. Deployment and security claims must be verified separately.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-

@@ -1,4 +1,4 @@
-# Commander OS Package Boundary and Provenance
+# Justice OS Chromium Edition Package Boundary and Provenance
 
 ## Purpose
 
@@ -22,7 +22,7 @@ See [`KERNEL_PIN`](./KERNEL_PIN) for the exact Kernel default-branch tip, featur
 
 ## Release and diligence requirements
 
-Before representing a Commander OS package as production-ready, record and independently validate at least:
+Before representing a Justice OS bootable package as production-ready, record and independently validate at least:
 
 1. exact source revisions and reproducible build instructions;
 2. package/image contents and software bill of materials;
