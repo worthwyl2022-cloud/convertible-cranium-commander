@@ -104,15 +104,15 @@ export default function App() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-extrabold tracking-tight text-white">
-                  WORTHWYL CREATIVE OS
+                  CONVERTIBLE CRANIUM JUSTICE OS
                 </span>
                 <span className="px-1.5 py-0.2 rounded text-[10px] font-mono uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">
-                  CRANIUM CORE v3
+                  CHROMIUM EDITION
                 </span>
               </div>
               <div className="flex items-center gap-2 text-[10px] font-mono text-neutral-400">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>SUBSTRATE ACTIVE // NON-LINEAR RESONANCE</span>
+                <span>GOVERNANCE ARCHITECTURE // KERNEL AUTHORITY BOUNDARY</span>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             <span className="font-semibold text-neutral-200">WorthWyl Cognitive Substrate</span>
-            <span>&bull; Microsoft Azure Ready &bull; Tier 3 Substrate Roadmap</span>
+            <span>&bull; Architecture target only &bull; No live cloud claim</span>
           </div>
 
           <div className="flex items-center gap-4 text-neutral-400">
