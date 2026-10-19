@@ -7,8 +7,8 @@ This document defines what the public `convertible-cranium-commander` repository
 ## Package boundary
 
 - **This repository:** the public Commander web/interface surface and its presentation assets.
-- **Canonical authority implementation:** [`cranium-kernel`](https://github.com/worthwyl2022-cloud/cranium-kernel). Commander is an operating surface, not the authority plane.
-- **Canonical Commander source noted by the repository:** `worthwyl2022-cloud/cranium-boot-drive/ecosystem/commander`, at the source revision recorded in `PROVENANCE.md`. That source revision is provenance evidence, not proof that every current public artifact is byte-for-byte reproducible from it.
+- **Canonical authority implementation:** [`cranium-kernel`](https://github.com/worthwylfoundation-hue/cranium-kernel). Commander is an operating surface, not the authority plane.
+- **Canonical Commander source noted by the repository:** `worthwylfoundation-hue/cranium-boot-drive/ecosystem/commander`, at the source revision recorded in `PROVENANCE.md`. That source revision is provenance evidence, not proof that every current public artifact is byte-for-byte reproducible from it.
 - **OS/bootable image:** this repository alone does not establish a complete, reproducible, bootable ChromiumOS/OS package. Do not describe the public web surface as a verified OS image or infer that it includes every runtime, driver, signer, update channel, or deployment component.
 - **Archived material:** historical repositories and artifacts are reference evidence only unless explicitly reactivated and independently validated.
 
@@ -18,7 +18,7 @@ Cognition and interface code may propose or present operations; they do not gran
 
 ## Kernel pin and verification lineage
 
-See [`KERNEL_PIN`](./KERNEL_PIN) for the exact Kernel default-branch tip, feature tip, and verification lineage. The pin now points to `710ab844571c704078852b38d9451ffe68900acf`. A pin identifies a revision; it does not itself certify that revision. A fresh clean-clone run of `npm ci && npm run verify && npm run verify:denial-semantics` passed on that exact SHA on 2026-10-17; `npm audit` reported zero vulnerabilities. The verification output still reports two local Compose warnings: PostgreSQL TLS is disabled locally and Redis uses plaintext locally. Production deployments must enable PostgreSQL TLS and use `rediss://` or private-network encryption for Redis. This does not establish that a live production database, Redis, HSM/KMS, or independently audited deployment exists.
+See [`KERNEL_PIN`](./KERNEL_PIN) for the exact Kernel default-branch tip, feature tip, and verification lineage. The observed Kernel main tip on 2026-10-19 is `720c299a2e748d1f5ac4b26530a068499b911399`. The latest recorded clean-clone verification stamp remains `710ab844571c704078852b38d9451ffe68900acf`, verified on 2026-10-17; the newer main tip is not represented as independently clean-clone verified by this document. A pin identifies a revision; it does not itself certify that revision. The clean-clone run of `npm ci && npm run verify && npm run verify:denial-semantics` passed on the 710ab stamp; `npm audit` reported zero vulnerabilities on that exact SHA. The verification output still reports two local Compose warnings: PostgreSQL TLS is disabled locally and Redis uses plaintext locally. Production deployments must enable PostgreSQL TLS and use `rediss://` or private-network encryption for Redis. This does not establish that a live production database, Redis, HSM/KMS, or independently audited deployment exists.
 
 ## Release and diligence requirements
 
