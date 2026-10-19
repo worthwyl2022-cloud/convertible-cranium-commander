@@ -1,10 +1,10 @@
-KERNEL_REPO=https://github.com/worthwyl2022-cloud/cranium-kernel
+KERNEL_REPO=https://github.com/worthwylfoundation-hue/cranium-kernel
 KERNEL_BRANCH=main
-KERNEL_MAIN_TIP=710ab844571c704078852b38d9451ffe68900acf
+KERNEL_MAIN_TIP=720c299a2e748d1f5ac4b26530a068499b911399
 KERNEL_FEATURE_TIP=1704c3e30269a364f696d96bf76b48c87daabee9
-KERNEL_PIN_UPDATED=2026-10-17
+KERNEL_PIN_UPDATED=2026-10-19
 
-# Independent clean-clone verification stamp for the pinned current main tip.
+# Last independently clean-clone-verified Kernel revision; it may lag the observed main tip.
 VERIFIED_DILIGENCE_STAMP=710ab844571c704078852b38d9451ffe68900acf
 VERIFIED_ON=2026-10-17
 VERIFIED_COMMANDS=npm ci && npm run verify && npm run verify:denial-semantics
@@ -13,8 +13,9 @@ VERIFIED_ENVIRONMENT=fresh-clean-clone-at-exact-sha
 NPM_AUDIT_VULNERABILITIES=0
 PRODUCTION_READINESS_WARNINGS=2
 
-# Current Kernel main tip and clean-clone verification stamp: 710ab844571c704078852b38d9451ffe68900acf.
-# npm audit reports zero vulnerabilities on this exact tip.
+# Observed Kernel main tip on 2026-10-19: 720c299a2e748d1f5ac4b26530a068499b911399.
+# The latest recorded clean-clone verification stamp remains 710ab844571c704078852b38d9451ffe68900acf (2026-10-17); the newer main tip is not claimed clean-clone verified here.
+# npm audit reported zero vulnerabilities on the verified 710ab844571c704078852b38d9451ffe68900acf stamp.
 # Production-readiness emits two local Compose warnings: PostgreSQL TLS is disabled
 # locally and the local Redis endpoint is plaintext. Production must use TLS settings.
 # The feature tip 1704c3e includes merged enterprise gateway PR #48.
