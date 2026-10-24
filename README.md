@@ -4,7 +4,7 @@ Public web surface for **Convertible Cranium Justice OS**. **Convertible Cranium
 
 ## Canonical architecture
 
-The Quantum-Hybrid Authority-Bound Governance Layer contains the Quantum-Hybrid Dual-Substrate, Quad-Engine architecture:
+The Quantum-Hybrid Authority-Bound Governance Layer is a design and capability target describing a Dual-Substrate, Quad-Engine architecture:
 
 - **Convertible Cranium Guardian Substrate — Constitutional Integrity**
   - Engine A1: Synapse projection D_A, constitutional path
@@ -12,7 +12,7 @@ The Quantum-Hybrid Authority-Bound Governance Layer contains the Quantum-Hybrid 
 - **Convertible Cranium Imperial Substrate — Evidence Integrity**
   - Engine B1: Synapse projection D_B, evidence path
   - Engine B2: Evidence Grounding
-- Both paths converge beneath all four engines at **Convertible Cranium Liberty Kernel** (proposed product name; implementation/repository currently remains Cranium Kernel / `cranium-kernel` until rename is verified).
+- Both paths are designed to converge at the Kernel boundary. The implementation remains the private `worthwylfoundation-hue/cranium-kernel` repository; this interface does not claim that a public Kernel URL exists.
 
 Synapse is one system with two substrate-aligned projections. This is not a vote. The Kernel alone grants or denies governed actions and emits canonical decision/execution receipts. Quantum, classical, model, and UI outputs are supporting inputs, never authority.
 
@@ -25,3 +25,6 @@ Use **Constitutional Integrity** and **Evidence Integrity**. Do not use retired 
 > Cognition may come from anywhere. Authority comes only through Cranium.
 
 This repository is an interface/documentation surface, not proof that every target component is implemented. It does not establish a quantum backend, HSM/KMS custody, verified boot/rootfs, production deployment, multi-node fencing, independent security audit, or live durable database. A pin identifies a revision; it does not itself certify it. See `KERNEL_PIN` and `COMMANDER_OS_PACKAGE_BOUNDARY.md`.
+
+
+See also: [ECOSYSTEM.md](./ECOSYSTEM.md) · [LICENSE](./LICENSE)

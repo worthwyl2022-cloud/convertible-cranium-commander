@@ -2,7 +2,7 @@
 
 This repository is **archived lineage** (OS demo layer). It is preserved for provenance and IP history.
 
-**Canonical source:** [cranium-kernel](https://github.com/worthwyl2022-cloud/cranium-kernel)
+**Canonical source:** private `worthwylfoundation-hue/cranium-kernel` (see `KERNEL_PIN` where present)
 
 **Archive record:** [cranium-relics](https://github.com/worthwyl2022-cloud/cranium-archive) (private)
 
